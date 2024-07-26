@@ -1,0 +1,7 @@
+github:
+  api:
+    url: https://api.github.com
+    
+server:
+  servlet:
+    context-path: /api
