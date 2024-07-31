@@ -9,7 +9,7 @@ import pl.rstrzalkowski.githubclient.client.RepositoryBranchDto;
 @NoArgsConstructor
 @Getter
 @Setter
-class RepositoryBranchApiDto {
+public class RepositoryBranchApiDto {
     private String name;
     private String lastCommitSHA;
 

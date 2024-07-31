@@ -3,11 +3,10 @@ package pl.rstrzalkowski.githubclient.exception;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.reactive.result.method.annotation.ResponseEntityExceptionHandler;
 import pl.rstrzalkowski.githubclient.api.ErrorResponse;
 
 @ControllerAdvice
-public class ExceptionMapper extends ResponseEntityExceptionHandler {
+public class ExceptionMapper {
 
     @ExceptionHandler(GithubClientException.class)
     protected ResponseEntity<Object> handleGithubClientException(GithubClientException ex) {

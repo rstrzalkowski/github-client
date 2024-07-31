@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-class RepositoryApiDto {
+public class RepositoryApiDto {
     private String owner;
     private String name;
     private List<RepositoryBranchApiDto> branches;
