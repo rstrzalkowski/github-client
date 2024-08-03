@@ -17,7 +17,7 @@ public class GithubService {
 
     public List<RepositoryApiDto> getGithubRepositoriesByUsername(String username) throws GithubClientException {
         try {
-            return githubHttpClient.getUserRepositories(username).stream()
+            return githubHttpClient.getUserRepositories(username).parallelStream()
                     .filter(r -> !r.isFork())
                     .map(RepositoryApiDto::new)
                     .peek(dto -> {
